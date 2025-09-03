@@ -1,0 +1,47 @@
+{
+  "name": "vuepress-plugin-all-in-one-accessibility",
+  "version": "1.0.0",
+  "description": "Website accessibility widget for improving WCAG 2.0, 2.1, 2.2 and ADA compliance!",
+  "keywords": [
+    "vuepress-plugin",
+    "vuepress",
+    "plugin",
+    "All in One Accessibility",
+    "ADA",
+    "All in One Accessibility vuepress",
+    "vuepress Plugin All in One Accessibility",
+    "vuepress-plugin-all-in-one-accessibility"
+  ],
+  "homepage": "https://github.com/skynettechnologies/vuepress-plugin-all-in-one-accessibility",
+  "bugs": {
+    "url": "https://github.com/skynettechnologies/vuepress-plugin-all-in-one-accessibility/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skynettechnologies/vuepress-plugin-all-in-one-accessibility.git"
+  },
+  "license": "MIT",
+  "author": "Skynet Technologies USA LLC <developer3@skynettechnologies.com>",
+  "type": "module",
+  "exports": {
+    ".": "./lib/node/index.js",
+    "./client": "./lib/client/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./lib/node/index.js",
+  "types": "./lib/node/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json",
+    "bundle": "rollup -c rollup.config.ts --configPlugin esbuild",
+    "clean": "rimraf --glob ./lib ./*.tsbuildinfo"
+  },
+  "peerDependencies": {
+    "vuepress": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
